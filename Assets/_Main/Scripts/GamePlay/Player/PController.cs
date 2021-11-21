@@ -50,9 +50,9 @@ public class PController : MonoBehaviour
             var direction = new Vector3(0, 0, speed);
 
             transform.position += direction * Time.fixedDeltaTime;
-
             
-            }
+
+        }
      
 
         ValidateLocation();
@@ -72,9 +72,11 @@ public class PController : MonoBehaviour
         {
             _animationController.SetBool("havada", true);
             _ınsananimationController.SetBool("havada", true);
+            
         }
         else
         {
+
             _animationController.SetBool("süzül", false);
             _animationController.SetBool("havada", false);
 
