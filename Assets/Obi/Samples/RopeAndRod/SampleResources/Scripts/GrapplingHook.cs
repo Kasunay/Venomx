@@ -25,9 +25,10 @@ public class GrapplingHook : MonoBehaviour
     private ObiRopePrefabPlugger prefabPlugger;
     public GameObject plyr;
     public Animator _animationController = null;
-   // public GameObject kanca;
+    public Animator _ınsananimationController = null;
+    // public GameObject kanca;
 
-  
+
 
     private bool havada;
    
@@ -131,6 +132,7 @@ public class GrapplingHook : MonoBehaviour
 
                 havada = true;
                 _animationController.SetBool("süzül", false);
+                _ınsananimationController.SetBool("süzül", false);
 
                 /*      if (Input.mousePosition.x < Screen.width / 2)
                      {
@@ -215,6 +217,7 @@ public class GrapplingHook : MonoBehaviour
         plyr.transform.rotation = Quaternion.Lerp(currRotation, targetRotation, Time.fixedDeltaTime * 45);
         havada = false;
         _animationController.SetBool("süzül", true);
+        _ınsananimationController.SetBool("süzül", true);
     }
 
 
@@ -236,7 +239,7 @@ public class GrapplingHook : MonoBehaviour
         else
         {
             _animationController.SetBool("havada", false);
-        
+            _ınsananimationController.SetBool("havada", false);
         }
      
 

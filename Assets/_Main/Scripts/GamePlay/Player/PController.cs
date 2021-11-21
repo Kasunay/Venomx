@@ -16,7 +16,7 @@ public class PController : MonoBehaviour
     [SerializeField] private GameObject model = null;
     
     public Animator _animationController = null;
-
+    public Animator _ınsananimationController = null;
     private MeshRenderer _renderer = null;
 
     private Player _player = null;
@@ -71,11 +71,16 @@ public class PController : MonoBehaviour
         if (IsGrounded)
         {
             _animationController.SetBool("havada", true);
+            _ınsananimationController.SetBool("havada", true);
         }
         else
         {
             _animationController.SetBool("süzül", false);
             _animationController.SetBool("havada", false);
+
+
+            _ınsananimationController.SetBool("süzül", false);
+            _ınsananimationController.SetBool("havada", false);
             //yerde
         }
     }
