@@ -228,10 +228,14 @@ public class GrapplingHook : MonoBehaviour
         {
             if (!rope.isLoaded)
                 LaunchHook();
-            else
-                DetachHook();
+
         }
 
+        if (Input.GetMouseButtonUp(0))
+        {
+            DetachHook();
+
+        }
         if (havada)
         {
             
